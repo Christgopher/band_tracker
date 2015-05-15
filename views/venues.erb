@@ -1,0 +1,12 @@
+<% @venues.each() do |venue| %>
+<li><%= venue.name() %></a></li>
+<% end %>
+
+<h3>Add a venue:</h3>
+<form action="/venue" method="post">
+
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text">
+
+  <button type="submit">Add Venue</button>
+</form>

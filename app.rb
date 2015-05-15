@@ -35,3 +35,14 @@ delete('/band/:id') do
   @bands = Band.all
   erb(:bands)
 end
+
+get('/venues') do
+  @venues = Venue.all()
+  erb(:venues)
+end
+
+post('/venue') do
+  venue = Venue.create({name: params.fetch("name")})
+  @venues = Venue.all()
+  erb(:venues)
+end
