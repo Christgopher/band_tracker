@@ -1,0 +1,28 @@
+button.btn-danger {
+  position: fixed;
+  bottom: 50px;
+}
+
+a.back {
+  position: fixed;
+  bottom: 15px;
+}
+h2 {
+  color: #475C79;
+}
+
+h4 {
+  color: #475C79;
+}
+
+body {
+  background-color: #618D83;
+}
+
+a {
+  color: #295F53;
+}
+
+form {
+  color: #2F4461;
+}

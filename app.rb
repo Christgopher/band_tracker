@@ -25,7 +25,7 @@ get('/band/:id') do
   erb(:band)
 end
 
-patch('/band/:id/edit') do
+patch('/band/:id') do
   @band = Band.find(params.fetch("id").to_i)
   @band.update({name: params.fetch("name")})
   @venues = Venue.all
@@ -39,7 +39,7 @@ delete('/band/:id') do
   erb(:bands)
 end
 
-patch("/band/:id") do
+patch("/band/:id/venue") do
   venue_ids = params.fetch("venue_ids")
   @band = Band.find(params.fetch("id").to_i())
 

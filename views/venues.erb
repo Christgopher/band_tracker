@@ -1,8 +1,13 @@
+<h2>Venues</h2>
+<hr>
+<h4>Venues you're tracking:</h4>
 <% @venues.each() do |venue| %>
 <li><%= venue.name() %></a></li>
 <% end %>
-
-<h3>Add a venue:</h3>
+<br>
+<br>
+<hr>
+<h4>Add a venue:</h4>
 <form action="/venue" method="post">
 
   <label for="name">Name</label>
@@ -10,3 +15,5 @@
 
   <button type="submit">Add Venue</button>
 </form>
+
+<a href="/" class="back">Back</a>

@@ -1,8 +1,14 @@
+<h2>Bands</h2>
+<br>
+<hr>
+<h4>Bands you're tracking:</h4>
 <% @bands.each() do |band| %>
 <li><a href = "/band/<%= band.id() %>"><%= band.name() %></a></li>
 <% end %>
-
-<h3>Add a band:</h3>
+<br>
+<br>
+<hr>
+<h4>Add a Band:</h4>
 <form action="/band" method="post">
 
   <label for="name">Name</label>
@@ -10,3 +16,5 @@
 
   <button type="submit">Add Band</button>
 </form>
+
+<a href="/" class="back">Back</a>
