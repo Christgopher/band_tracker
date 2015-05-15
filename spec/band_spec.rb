@@ -10,4 +10,11 @@ describe(Band) do
     band = Band.create({name: "black sabbath"})
     expect(band.name).to(eq("Black sabbath"))
   end
+
+  it("adds venues to bands") do
+    venue = Venue.new({name: "paramount"})
+    band = Band.new({name: "black sabbath"})
+    band.venues.push(venue)
+    expect(band.venues).to(eq([venue]))
+  end
 end
