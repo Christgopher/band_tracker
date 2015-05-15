@@ -7,6 +7,22 @@
   <button type="submit">Update</button>
 </form>
 
+<% @band.venues.each() do |venue| %>
+<li><%= venue.name() %></li>
+<% end %>
+
+<form action="/band/<%= @band.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <% @venues.each() do |venue| %>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="venue_ids[]" value="<%= venue.id() %>"><%= venue.name() %>
+    </label>
+  </div>
+  <% end %>
+  <button type="submit">Add Venue</button>
+</form>
+
 <form action="/band/<%=@band.id %>" method="post">
   <div class="form-group">
     <input type="hidden" name="_method" value="delete">

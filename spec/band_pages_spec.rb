@@ -38,3 +38,15 @@ describe('the changing bands path', {:type => :feature}) do
     expect(page).to have_content("James")
   end
 end
+
+describe('the adding venues to bands path', {:type => :feature}) do
+  it('adds a venue to a band') do
+    band = Band.create({name: "joe"})
+    venue = Venue.create({name: "artichoke"})
+    visit('/bands')
+    click_link("Joe")
+    check 'Artichoke'
+    click_button('Add Venue')
+    expect(page).to have_content("Artichoke")
+  end
+end
