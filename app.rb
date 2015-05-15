@@ -11,3 +11,9 @@ get('/bands') do
   @bands = Band.all()
   erb(:bands)
 end
+
+post('/band') do
+  band = Band.create({name: params.fetch("name")})
+  @bands = Band.all()
+  erb(:bands)
+end

@@ -1,3 +1,12 @@
 <% @bands.each() do |band| %>
 <li><a href = "/band/<%= band.id() %>"><%= band.name() %></a></li>
 <% end %>
+
+<h3>Add a band:</h3>
+<form action="/band" method="post">
+
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text">
+
+  <button type="submit">Add Band</button>
+</form>
